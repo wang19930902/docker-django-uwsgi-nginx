@@ -4,7 +4,7 @@ django-uwsgi-nginx
 docker image for django (uwsgi) & nginx
 based off of debian:jessie
 
-`docker build -t mywebapp`
+`docker build -t mywebapp .`
 
 Example usage:
 `docker run -p 80 -d -e MODULE=myapp mywebapp`
