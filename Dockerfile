@@ -12,6 +12,7 @@ RUN (echo "daemon off;" >> /etc/nginx/nginx.conf &&\
   ln -s /opt/django/conf/supervisord.conf /etc/supervisor/conf.d/ &&\
   chmod +x /opt/django/run.sh)
 
+RUN pip install -r /opt/django/requirements.txt
 
 
 

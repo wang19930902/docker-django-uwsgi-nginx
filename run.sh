@@ -2,10 +2,8 @@
 
 set -e
 
-pip install -r /opt/django/requirements.txt
+# Do somethings need
+# Such as: python manage.py migrate
 
-MODULE=${MODULE:-mywebproject}
-
-sed -i "s#module=mywebproject.wsgi:application#module=${MODULE}.wsgi:application#g" /opt/django/conf/uwsgi.ini
-
+# start website
 exec /usr/bin/supervisord
