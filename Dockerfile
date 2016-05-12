@@ -8,12 +8,12 @@ ADD . /opt/django/
 
 RUN (echo "daemon off;" >> /etc/nginx/nginx.conf &&\
   rm /etc/nginx/sites-enabled/default &&\
-  ln -s /opt/django/django.conf /etc/nginx/sites-enabled/ &&\
-  ln -s /opt/django/supervisord.conf /etc/supervisor/conf.d/)
+  ln -s /opt/django/conf/django.conf /etc/nginx/sites-enabled/ &&\
+  ln -s /opt/django/conf/supervisord.conf /etc/supervisor/conf.d/)
 
 
 
 
-VOLUME ["/opt/django/app"]
+VOLUME ["/opt/django/"]
 EXPOSE 80
-CMD ["/opt/django/app/run.sh"]
+CMD ["/opt/django/run.sh"]
